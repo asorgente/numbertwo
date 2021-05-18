@@ -35,16 +35,6 @@
   font-size: 18px;
 }
 
-.anchoSass {
-  width: 50%;
-  background-color: aquamarine;
-  color: grey;
-}
-
-.icon-box {
-  background-color: aquamarine;
-}
-
 th {
   background-color: white;
   color: grey;
@@ -137,12 +127,10 @@ section {
 }
 
 .services__container—title {
-  font-size: 200px;
   margin-bottom: 0;
 }
 
 .services__container—parrafo {
-  background: aqua;
   margin-bottom: 0;
 }
 
