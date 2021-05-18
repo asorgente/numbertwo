@@ -1,0 +1,234 @@
+// estilos de sass //
+$azul: #003862;
+$blanco: white;
+$oscuro: #252525;
+$gris: grey;
+$prueba: aquamarine;
+$anchoFull: 100%;
+
+@for $i from 1 through 3 {
+    .tamanio-#{$i}{
+    font-size:18px * $i;
+    }
+}
+
+@each $color in green, blue, red {
+    .#{$color} {
+    color:$color;
+    }
+}
+
+$tamanioFuente: (
+    pMobile: 14px,
+    pDesktop:20px,
+    pTablet:18px
+);
+@each $elementoVista, $tamanio in $tamanioFuente {
+    .elemento-#{$elementoVista}{
+        font-size:$tamanio;
+    }
+}
+
+.anchoSass {
+    width: ($anchoFull/2);
+    background-color: $prueba;
+    color: $gris;
+}
+
+
+
+th {
+    background-color: $blanco;
+    color: $gris;
+}
+
+td{
+    background-color: $blanco;
+    color: $gris;
+}
+
+.subtitulosDeSeccion {
+    color: $blanco;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+section{
+    background-color:white;
+    color:#003862;
+    font-family: 'Manrope', sans-serif;
+    font-size:20px;
+    text-align:center;
+}
+
+footer {
+    background-color: #003862;
+}
+
+div .section-title h1 {
+    font-weight: bold;
+}
+
+div .services__container h2 {
+    font-weight: bold;
+}
+
+.row {
+    justify-content: center;
+}
+
+p {
+    margin:0px;
+    color: white;
+}
+
+section {
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: grey;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+//BEM INICIO // 
+.services__container {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.services__container—title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: grey;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+.services__container—title {
+    margin-bottom: 0;
+}
+.services__container—parrafo {
+    margin-bottom: 0;
+}
+
+//BEM - FIN //
+
+.section-title p {
+    margin-bottom: 0;
+}
+.section-bg {
+    padding: 120px 0;
+    color: #fff;
+}
+
+.section-bg:before {
+    content: "";
+    background: #003862;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+.services .icon-box {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    background: #252525;
+    transition: 0.3s;
+}
+
+.services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.services .icon-box h4 a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+.services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.services .php-email-form button[type="submit"] {
+    background:grey;
+    border: 0;
+    padding: 10px 32px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+
+
+@media only screen and (max-width : 360px) {
+    .section-bg {
+        padding: 20px 0;
+        color: #fff;
+    }
+    p {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .services .icon-box {
+        padding: 30px;
+        transition: 0s;
+    }
+    th {
+        font-size: 10px;
+    }
+    td {
+        font-size: 10px;
+    }
+    .table-dark {
+        background-color: aliceblue;
+        color: #003862;
+    }
+    iframe {
+        width: fit-content;
+    }
+    .services .php-email-form button[type="submit"] {
+        background:aliceblue;
+        border: 0;
+        padding: 5px 10px;
+        color:#003862;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .section-bg {
+        padding: 30px 0;
+        color: #fff;
+    }
+}
